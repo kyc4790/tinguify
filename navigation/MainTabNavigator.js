@@ -83,7 +83,7 @@ const StatsStack = createStackNavigator(
 StatsStack.navigationOptions = {
   tabBarLabel: 'Stats',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-stats' : 'md-stats'} />
   ),
 };
 
@@ -101,7 +101,7 @@ const RecStack = createStackNavigator(
 RecStack.navigationOptions = {
   tabBarLabel: 'Recs',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bulb' : 'md-bulb'} />
   ),
 };
 
