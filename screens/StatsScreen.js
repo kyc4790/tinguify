@@ -1,6 +1,10 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import AccessToken from '../constants/Rev';
+import { RevAiApiClient } from 'revai-node-sdk';
+
+const client = new RevAiApiClient(accessToken);
 
 class StatsScreen extends React.Component {
   state = {
