@@ -22,7 +22,9 @@ class RecScreen extends React.Component {
          * we just wanted to provide you with some helpful links.
          */}
         <View style={styles.titleContainer}>
-          <Text style={this.state.clicked ? styles.titleClicked: styles.titleUnclicked} onClick={this.toggleClicked}> Hello world! </Text>
+            <Text>
+                ?????
+            </Text>
         </View>
       </ScrollView>
     );
@@ -30,7 +32,7 @@ class RecScreen extends React.Component {
 }
 
 RecScreen.navigationOptions = {
-  title: 'Recs',
+  title: 'Recommendations',
 };
 
 export default RecScreen;

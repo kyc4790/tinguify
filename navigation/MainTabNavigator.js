@@ -71,6 +71,7 @@ HomeStack.navigationOptions = {
 //     fontFamily: 'open-sans',
 //   }
 // })
+
 HomeStack.path = '';
 
 const StatsStack = createStackNavigator(
@@ -81,9 +82,9 @@ const StatsStack = createStackNavigator(
 );
 
 StatsStack.navigationOptions = {
-  tabBarLabel: 'Stats',
+  tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-stats' : 'md-stats'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-contact' : 'md-contact'} />
   ),
 };
 
@@ -101,7 +102,7 @@ const RecStack = createStackNavigator(
 RecStack.navigationOptions = {
   tabBarLabel: 'Recs',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bulb' : 'md-bulb'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bulb' : 'md-'} />
   ),
 };
 
@@ -126,10 +127,9 @@ SettingsStack.navigationOptions = {
 SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
+  SettingsStack,
   HomeStack,
   StatsStack,
-  RecStack,
-  SettingsStack,
 });
 
 tabNavigator.path = '';

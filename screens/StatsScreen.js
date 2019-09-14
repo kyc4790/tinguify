@@ -30,7 +30,7 @@ class StatsScreen extends React.Component {
 }
 
 StatsScreen.navigationOptions = {
-  title: 'Stats',
+  title: 'Profile',
 };
 
 export default StatsScreen;
