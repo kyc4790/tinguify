@@ -1,4 +1,4 @@
-import React from React;x
+import React from 'react';
 
 class GroupInfo extends React.Component {
 

@@ -5,9 +5,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 //import LinksScreen from '../screens/LinksScreen';
-import StatsScreen from '../screens/StatsScreen';
+import StatsScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import RecScreen from '../screens/RecScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -65,11 +64,11 @@ HomeStack.navigationOptions = {
 //   }
 // })
 
-HomeStack.path = '';
+HomeStack.path = 'Home';
 
 const StatsStack = createStackNavigator(
   {
-    Stats: StatsScreen,
+    Profile: StatsScreen,
   },
   config
 );
@@ -81,25 +80,7 @@ StatsStack.navigationOptions = {
   ),
 };
 
-StatsStack.path = '';
-
-// RECS SCREEN /////////////////////////////////////////////
-
-const RecStack = createStackNavigator(
-  {
-    Recs: RecScreen,
-  },
-  config
-);
-
-RecStack.navigationOptions = {
-  tabBarLabel: 'Recs',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bulb' : 'md-bulb'} />
-  ),
-};
-
-RecStack.path = '';
+StatsStack.path = 'Profile';
 
 // SETTINGS SCREEN /////////////////////////////////////////
 
@@ -117,7 +98,7 @@ SettingsStack.navigationOptions = {
   ),
 };
 
-SettingsStack.path = '';
+SettingsStack.path = 'Settings';
 
 const tabNavigator = createBottomTabNavigator({
   SettingsStack,
