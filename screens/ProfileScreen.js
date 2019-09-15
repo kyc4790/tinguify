@@ -17,6 +17,7 @@ class ProfileScreen extends React.Component {
     name: '',
     birthday: new Date(),
     interests: '',
+    gender: '',
   }
 
   toggleClicked = () => {
@@ -30,6 +31,13 @@ class ProfileScreen extends React.Component {
       name: e,
     })
   }
+
+  setGender = (e) => {
+    this.setState({
+      gender: e,
+    })
+  }
+
 
   setBirthday = (e) => {
     this.setState({
@@ -56,6 +64,7 @@ class ProfileScreen extends React.Component {
           </View>
         </View>
         <Field onChangeText={this.setName} value={this.state.name} label={'Name'} />
+        <Field onChangeText={this.setGender} value={this.state.gender} label={'Gender'} />
         <Field onChangeText={this.setInterests} value={this.state.interests} label={'Interests'} long={true} />
         <Text style={styles.textLabel}>
           {'Birthday'}

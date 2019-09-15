@@ -7,8 +7,14 @@ class Home extends React.Component {
         viewMembers: true,
     }
 
+    toggleViewMembers = () => {
+        this.setState({
+            viewMembers: !this.state.viewMembers,
+        })
+    }
+
     render() {
-        return this.state.viewMembers ? (<GroupInfo/>): (<GroupChat/>);
+        return this.state.viewMembers ? (<GroupInfo onComplete={this.toggleViewMembers}/>): (<GroupChat onComplete={this.toggleViewMembers}/>);
     }
 }
 

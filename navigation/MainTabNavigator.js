@@ -104,6 +104,8 @@ const tabNavigator = createBottomTabNavigator({
   SettingsStack,
   HomeStack,
   StatsStack,
+}, {
+  initialRouteName: 'HomeStack'
 });
 
 tabNavigator.path = '';

@@ -42,6 +42,7 @@ styles = StyleSheet.create({
         flex: 1,
         fontSize: 48,
         textAlign: 'center',
+        fontFamily: 'fjalla-one',
     },
 })
 
